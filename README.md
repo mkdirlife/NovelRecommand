@@ -1,9 +1,9 @@
 
 # github_blog
-여행추천 페이지 with ChatGPT
+맛집추천 페이지 with ChatGPT
 
 * 목표
-    * github를 통해 여행정보를 ChatGPT API 통해서 추천서비스 제공
+    * github를 통해 맛집 정보를 ChatGPT API 통해서 추천서비스 제공
 
 * 사용방법
     1. https://mkdirlife.github.io/TravelRecommand 로 접속해주세요.
