@@ -6,13 +6,12 @@
     * github를 통해 여행정보를 ChatGPT API 통해서 추천서비스 제공
 
 * 사용방법
-    1. github pages를 활성화 해주세요.
-    2. 글을 작성하고 싶으면 `blog`에 `[date]_[title]_[category]_[thumnail]_[description].md` 형식(`md`, `ipynb` 호환)으로 글을 작성해주세요. 섬네일을 비우고 싶다면 `[]`와 같이 빈 값으로 주세요.
-    3. 추가 메뉴를 만들고 싶으면 `menu` 폴더에 `사용하고싶은 메뉴 이름.html` 형식으로 저장하면 메뉴로 생성됩니다.
+    1. https://mkdirlife.github.io/TravelRecommand 로 접속해주세요.
+    2. input에 질문에 맞는 답을 입력하고, 버튼을 눌러주세요.
 
 * 서비스 URL 정보
-    * 실행 URL: https://paullabkorea.github.io/github_blog/
-    * blog github repo: https://github.com/paullabkorea/github_blog
+    * 실행 URL: https://mkdirlife.github.io/TravelRecommand
+    * blog github repo: https://github.com/mkdirlife/TravelRecommand
     
 
 * 기존 GitHub 블로그와 비교
