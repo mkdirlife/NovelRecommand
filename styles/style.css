@@ -1,0 +1,102 @@
+body {
+    padding: 20px 0 0 0;
+
+}
+
+/* header */
+header {
+    position: relative; /* right-text의 절대 위치를 이 태그에 맞춤 */
+    height: 80px;
+}
+
+main {
+    left: 19%;
+}
+
+.left-text {
+    /* 기본적으로 인라인 요소는 왼쪽에 정렬됨 */
+    position: absolute;
+    left: 19%;
+    font-family: 'Spoqa Han Sans Neo';
+    font-size: 32px;
+    line-height: 40px;   
+    color: #2E6FF2;
+ 
+}
+
+.right-text {
+    position: absolute;
+    padding-top: 10px;
+    right: 19%;
+    font-family: 'Spoqa Han Sans Neo';
+    font-size: 16px;
+    line-height: 20px;   
+    color: #8D9299;
+}
+
+/* main */
+.cont-main {
+    display: flex;
+    justify-content: space-between; /* 자식 요소들 사이에 공간을 균등하게 배분 */    
+    align-items: flex-start;
+}
+
+.cont-main .img-section {
+    margin: 60px 40px 130px 0;
+    position: relative;
+    left: 19%;  
+    max-width: 560px;
+}
+
+.cont-main .input-section {
+    margin: 60px 0 0 0;
+    position: relative;
+    left: 19%;
+}
+
+.img-section, .input-section {
+    flex: 1;
+}
+
+
+.input-section h2 {
+    margin-bottom: 32px;
+    font-family: 'Spoqa Han Sans Neo';
+    font-size: 32px;
+    line-height: 40px; 
+}
+
+.input-section p {
+    margin-top: 24px;
+    font-family: 'Spoqa Han Sans Neo';
+    font-size: 16px;
+    line-height: 20px;
+
+}
+
+.input-section input {
+    margin-top: 10px;
+    width: 590px;
+    height: 50px;
+    border-color: #D9DBE0;
+}
+
+
+
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 700;
+    src: local('Spoqa Han Sans Neo Bold'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@latest/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@latest/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@latest/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 500;
+    src: local('Spoqa Han Sans Neo Medium'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@latest/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@latest/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@latest/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.ttf') format('truetype');
+}
