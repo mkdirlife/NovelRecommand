@@ -85,51 +85,16 @@ gantt
     title 깃헙 정적 블로그
     dateFormat  YYYY-MM-DD
     section 계획
-    프로젝트 범위 정의        :done,    des1, 2024-01-15, 2d
-    요구사항 수집             :active,  des2, after des1, 5d
+    프로젝트 범위 정의        :    des1, 2024-02-13, 1d
     section 설계
-    와이어프레임 작성         :         des3, after des2, 7d
-    데이터베이스 스키마 설계  :         des4, after des2, 7d
+    와이어프레임 작성         :    des2, after des1, 12h
     section 개발
-    기능 개발                :         dev2, after des2, 10d
+    기능 개발                :     dev1, after des2, 1d
     section 테스트
-    테스트 케이스 작성       :         tes1, after dev2, 2d
-    테스트                  :         tes2, after dev1, 2d
+    테스트                  :     tes1, after dev1, 6h
     section 배포
-    배포 준비               :         dep1, after tes2, 2d
-    출시                    :         dep2, after dep1, 1d
+    배포 준비               :     dep1, after tes1, 6h
 ```
-
-* 데이터베이스 스키마
-    * url(URLparsing)
-
-        | 키       | 설명                         | 예시 값                       |
-        |----------|-----------------------------|-----------------------------|
-        | hash     | 해시값 (URL의 # 이후 부분)   | ""                          |
-        | host     | 호스트명과 포트번호           | "127.0.0.1:5500"            |
-        | hostname | 호스트명 (포트번호 제외)      | "127.0.0.1"                 |
-        | href     | 전체 URL                     | "http://127.0.0.1:5500/index.html" |
-        | origin   | 프로토콜과 호스트            | "http://127.0.0.1:5500"     |
-        | password | 비밀번호 (있을 경우)          | ""                          |
-        | pathname | 도메인 이후의 경로            | "/index.html"               |
-        | port     | 포트 번호                    | "5500"                      |
-        | protocol | 사용된 프로토콜               | "http:"                     |
-        | search   | 쿼리 문자열 (있을 경우)       | ""                          |
-
-    * blogList, BlogMenu(GitHub API)
-
-        | Key           | 설명                                         | 예시 값 |
-        |---------------|---------------------------------------------|---------|
-        | name          | 파일 이름                                    | "about.md", "blog.md" |
-        | path          | 파일 경로                                    | "menu/about.md", "menu/blog.md" |
-        | sha           | 파일의 SHA 체크섬                            | "0953...d5b25", "7f34...f354f" |
-        | size          | 파일 크기 (바이트)                           | 856, 6 |
-        | url           | 파일의 API URL                               | "https://api.github.com/repos/paullabkorea/github_blog/contents/menu/about.md?ref=main", "https://api.github.com/repos/paullabkorea/github_blog/contents/menu/blog.md?ref=main" |
-        | html_url      | 파일의 GitHub 페이지 URL                     | "https://github.com/paullabkorea/github_blog/blob/main/menu/about.md", "https://github.com/paullabkorea/github_blog/blob/main/menu/blog.md" |
-        | git_url       | 파일의 Git 블롭 URL                          | "https://api.github.com/repos/paullabkorea/github_blog/git/blobs/095349309b14d370ddae691e1e29a753300d5b25", "https://api.github.com/repos/paullabkorea/github_blog/git/blobs/7f347a7d841ac1d1e1cfb1ae12c967e83d1f354f" |
-        | download_url  | 파일을 다운로드할 수 있는 URL                | "https://raw.githubusercontent.com/paullabkorea/github_blog/main/menu/about.md", "https://raw.githubusercontent.com/paullabkorea/github_blog/main/menu/blog.md" |
-        | type          | 파일 타입                                   | "file" |
-        | _links        | 관련 링크 (자기 자신, Git, HTML 링크 포함)   | 내부 링크 객체 |
 
 * 화면 정의서
     <table>
