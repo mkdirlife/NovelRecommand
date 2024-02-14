@@ -93,49 +93,14 @@ gantt
         </tr>
         <tr>
             <td width="70%">
-                <img src="readme_img/Blog.jpg">
+                <img src="README%20image/orm_project.jpg">
             </td>
             <td>
                 <ul>
-                    <li>목록 필요</li>
-                    <li>URL 파싱 및 URL 변경 필요</li>
-                    <li>목록을 6개씩 잘라내어 넘어가게 하거나 무한스크롤 구현</li>
-                    <li>가장 최신의 게시물을 맨 위에 게시</li>
-                </ul>
-            </td>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <th>포스트 화면</th>
-            <th>설명</th>
-        </tr>
-        <tr width="70%">
-            <td width="70%">
-                <img src="readme_img/Blog_posts.jpg">
-            </td>
-            <td>
-                <ul>
-                    <li>목록을 불러오는 것이 불필요 하지만 검색 버튼을 눌렀을 경우 목록을 불러올 필요가 있음</li>
-                    <li>URL 파싱 및 URL 변경 필요</li>
-                    <li>posts 변수에 담아 다른 페이지 이동 후 재접속 할 때 다시 통신하지 않게 처리</li>
-                </ul>
-            </td>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <th>그 외 메뉴 화면</th>
-            <th>설명</th>
-        </tr>
-        <tr>
-            <td width="70%">
-                <img src="readme_img/About.jpg">
-            </td>
-            <td>
-                <ul>
-                    <li>목록을 불러오는 것이 불필요 하지만 검색 버튼을 눌렀을 경우 목록을 불러올 필요가 있음</li>
-                    <li>URL 파싱 및 URL 변경 필요</li>
+                    <li>필요 정보 입력 후</li>
+                    <li>일정 생성 버튼 클릭</li>
+                    <li>하단 여행일정에 표로 일정 구현</li>
+                    <li>logo 클릭시 리셋</li>
                 </ul>
             </td>
         </tr>
