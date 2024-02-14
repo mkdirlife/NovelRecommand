@@ -14,7 +14,7 @@
     * blog github repo: https://github.com/mkdirlife/NovelRecommand
     
 
-* 맛집추천 페이지 with ChatGPT와 비교
+* 이야기 추천 페이지 with ChatGPT와 비교
 
 
 * 구조
@@ -98,8 +98,8 @@ gantt
             <td>
                 <ul>
                     <li>필요 정보 입력 후</li>
-                    <li>일정 생성 버튼 클릭</li>
-                    <li>하단 여행일정에 <br>표로 일정 구현</li>
+                    <li>글 생성 버튼 클릭</li>
+                    <li>하단에 짧은 이야기<br> 추천</li>
                     <li>logo 클릭시 리셋</li>
                 </ul>
             </td>
