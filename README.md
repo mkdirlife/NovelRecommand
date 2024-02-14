@@ -1,17 +1,17 @@
 
-# 맛집추천 페이지 with ChatGPT
-맛집추천 페이지 with ChatGPT
+# 이야기 추천 페이지 with ChatGPT
+이야기 추천 페이지 with ChatGPT
 
 * 목표
-    * 맛집 정보를 ChatGPT API 통해서 추천서비스 제공
+    * 간단한 이야기를 ChatGPT API 통해서 추천서비스 제공
 
 * 사용방법
-    1. https://mkdirlife.github.io/TravelRecommand 로 접속해주세요.
+    1. https://mkdirlife.github.io/NovelRecommand 로 접속해주세요.
     2. input에 질문에 맞는 답을 입력하고, 버튼을 눌러주세요.
 
 * 서비스 URL 정보
-    * 실행 URL: https://mkdirlife.github.io/TravelRecommand
-    * blog github repo: https://github.com/mkdirlife/TravelRecommand
+    * 실행 URL: https://mkdirlife.github.io/NovelRecommand
+    * blog github repo: https://github.com/mkdirlife/NovelRecommand
     
 
 * 맛집추천 페이지 with ChatGPT와 비교
