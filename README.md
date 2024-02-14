@@ -1,9 +1,9 @@
 
-# github_blog
+# 맛집추천 페이지 with ChatGPT
 맛집추천 페이지 with ChatGPT
 
 * 목표
-    * github를 통해 맛집 정보를 ChatGPT API 통해서 추천서비스 제공
+    * 맛집 정보를 ChatGPT API 통해서 추천서비스 제공
 
 * 사용방법
     1. https://mkdirlife.github.io/TravelRecommand 로 접속해주세요.
@@ -14,15 +14,8 @@
     * blog github repo: https://github.com/mkdirlife/TravelRecommand
     
 
-* 기존 GitHub 블로그와 비교
-    * 기존 지킬 블로그에 비해 사용법이 단순
-        * fork 후 pages 설정만 하면 blog 제작 가능
-    * 커스터마이징에 난이도 단순
-        * config.js 파일 수정으로 커스터마이징
-        * style 파일 수정으로 커스터마이징
-        * 빌드 시스템으로 되어 있지 않아 JS를 알면 직접 커스터마이징 가능
-    * 블로그 글을 컴파일 없이 확인 가능
-    * ipynb에 대한 블로깅 가능
+* 맛집추천 페이지 with ChatGPT와 비교
+
 
 * 구조
 ```mermaid
@@ -52,10 +45,6 @@ graph LR
     
     A -->|Toggle Mobile Menu| Q[JS/mobileMenuToggle.js]
 ```
-
-* 중요 의사결정
-    * 서비스 고도화에 따라 의사결정이 필요한 부분 정리
-        * local_blogList.json과 local_blogMenu.json를 사용자에게 작성하게 하면 무제한으로 API를 활용할 수 있음
 
 * 폴더 트리
 
