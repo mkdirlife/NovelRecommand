@@ -32,8 +32,18 @@ graph TD;
 ```
 
 * 폴더 구조
-
-  <img src="README%20image/폴더구조.png"> 
+```
+HTML_CSS project
+├── images
+│   └── writing.png
+├── js
+│   └── index.js
+├── styles
+│   ├── common.css
+│   ├── reset.css
+│   └── style.css
+└── index.html
+```
 
 * 코드 컨벤션과 변수 컨벤션
    * 들여쓰기 tab(4칸)
