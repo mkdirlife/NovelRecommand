@@ -109,7 +109,7 @@ h2, h3{
 }
 
 .input-form button {
-    margin-top: 54px;
+    margin: 54px 0 10px;
     width: 590px;
     height: 54px;
     position: relative;
@@ -146,7 +146,6 @@ button:active {
 .error-message {
     display: none; /* 기본적으로 메시지를 숨깁니다 */
     color: red; /* 오류 메시지의 색상을 지정합니다 */
-    margin-left: 10px; /* 메시지와 버튼 사이의 간격을 지정합니다 */
 }
 
 .bottom-section table {
