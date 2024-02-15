@@ -130,14 +130,14 @@ function isValid() {
     for(i=0 ; i < values.length ; i++){
       if(consonantCheck.test(values[i]) || vowelCheck.test(values[i])) {
         messageBox.textContent = '자음 또는 모음을 두 개 이상 연속으로 입력할 수 없습니다.';    // 오류 메시지를 설정합니다
-        messageBox.style.display = "inline";                                                // 메시지를 보이게 합니다
+        messageBox.style.display = "block";                                                // 메시지를 보이게 합니다
         
         console.log(messageBox); // 결과를 콘솔에 출력
   
         break;
       } else if(reg.test(values[i])) {
         messageBox.textContent = '한글과 영문만 입력 가능합니다.';    // 오류 메시지를 설정합니다
-        messageBox.style.display = "inline";                        // 메시지를 보이게 합니다
+        messageBox.style.display = "block";                        // 메시지를 보이게 합니다
         
         console.log(messageBox); // 결과를 콘솔에 출력
   
