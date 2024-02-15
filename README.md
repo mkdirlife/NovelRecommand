@@ -47,14 +47,9 @@ HTML_CSS project
 
 * 코드 컨벤션과 변수 컨벤션
    * 들여쓰기 tab(4칸)
-   * 자바스크립트 카멜표기법 
-    * 변수명(함수명): 역할
-        * blogList(initDataBlogList): (fetch) repo에서 blog폴더에 있는 파일 명을 정규표현식으로 파싱, 데이터가 이미 있다면 다시 통신하지 않음.
-        * blogMenu(initDataBlogMenu): (fetch) repo에서 menu폴더에 있는 파일 명을 파싱, 데이터가 이미 있다면 다시 통신하지 않음.
-        * posts: (fetch) post의 정보를 가져와 데이터 저장, 재접속시 , 데이터가 이미 있다면 다시 통신하지 않음.
-        * url
-            * url: ChatGPT api 주소
-        * isLocal: 로컬과 배포여부
+   * 자바스크립트 카멜표기법
+   * HTML class명은 '역할-태그명' 형태
+
 
 * WBS
 ```mermaid
