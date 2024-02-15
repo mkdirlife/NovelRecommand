@@ -40,7 +40,6 @@ const printAnswer = (answer) => {
     // 문장 단위로 배열에 넣음.
     //let answerArray = answer.replace(/\n\s/g, ' ').split(/(?<=[.!?])"?\s+/);
     let answerArray = answer.split(/(?<=[.!?])\s+|(?<=[.!?])(?=[A-Z])/);
-    console.log(answerArray);
 
     let checkText = '';
     let currentLength = 0;
@@ -62,7 +61,6 @@ const printAnswer = (answer) => {
         currentLength += checkArray.length + (currentLength > 0 ? 1 : 0);   // 공백을 고려한 길이 추가
     });
 
-    console.log(checkText);
     td.innerHTML = checkText; //.replace(/\.\s/g, '.<br>')       // 아래 table에 결과값 출력
 };
 
@@ -106,51 +104,51 @@ document.querySelector("form").addEventListener("submit", (e) => {
         apiPost();
     } else {
         e.preventDefault(); // 유효하지 않을때 폼 제출 방지   
-    };
+    }
 });
 
 function isValid() {
     // 모든 input 요소를 선택합니다.
     let inputs = document.querySelectorAll('.input-form input');
+    // 유효하지 않을때 오류메시지 나타내기 위한 변수
+    const messageBox = document.getElementById("messageBox");
+    // 에러체크위함.
+    let isError = true;
 
     // 체크된 라디오 버튼과 다른 모든 입력 필드의 값을 추출합니다.
     let values = Array.from(inputs)                                 // NodeList를 배열로 변환
         .filter(input => input.type !== 'radio' || input.checked)   // 체크된 라디오 버튼 또는 라디오가 아닌 입력 필드만 필터링
         .map(input => input.value);                                 // 필터링된 입력 필드의 값을 배열로 만듦    
-    
-    const messageBox = document.getElementById("messageBox");
   
-    // 자음이 연속되거나 모음이 연속됐을때 오류메시지 띄우기
-    let consonantCheck = /[ㄱ-ㅎ]{2,}/;
-    let vowelCheck = /[ㅏ-ㅣ]{2,}/;
-
     // 한글이 아닌 문자를 찾는 정규 표현식
-    let reg = /[^가-힣ㄱ-ㅎㅏ-ㅣa-z\x20]/g;           // \x20 공백(' ') 아스키코드, /g 전역검색
-    
-    for(i=0 ; i < values.length ; i++){
-      if(consonantCheck.test(values[i]) || vowelCheck.test(values[i])) {
-        messageBox.textContent = '자음 또는 모음을 두 개 이상 연속으로 입력할 수 없습니다.';    // 오류 메시지를 설정합니다
-        messageBox.style.display = "block";                                                // 메시지를 보이게 합니다
-        
-        console.log(messageBox); // 결과를 콘솔에 출력
-  
-        break;
-      } else if(reg.test(values[i])) {
+    let reg = /[^\uAC00-\uD7A3ㅣa-z\x20]/g;           // \x20 공백(' ') 아스키코드, /g 전역검색
+ 
+    for(i=0 ; i < values.length-1 ; i++){
+
+      if(reg.test(values[i])) {
         messageBox.textContent = '한글과 영문만 입력 가능합니다.';    // 오류 메시지를 설정합니다
         messageBox.style.display = "block";                        // 메시지를 보이게 합니다
         
-        console.log(messageBox); // 결과를 콘솔에 출력
-  
+        isError = true;
         break;
       } else {
-        messageBox.style.display = "none"; // 메시지를 숨깁니다
+        isError = false;
+      }  
+    }
 
-        question = values[3] + `자 이상 ` + values[1] +` 주제로 ` + values[2] + ` 장르로 ` + values[0] 
-                    + `을 써줘. 그리고, 부가적인 설명 없이 필요한 글만 소설 이면 소설, 시 라면 시만 출력해줘.` 
-        return true;
-      };
-    };
-    return false;
+    if(!isError) {
+      messageBox.style.display = "none"; // 메시지를 숨깁니다
+
+      question = values[3] + `자 이상 ` + values[1] +` 주제로 ` + values[2] + ` 장르로 ` + values[0] 
+                  + `을 써줘. 그리고, 부가적인 설명은 제외해줘`;
+
+      inputs.forEach(input => {
+        input.value = ""; // 각 input 요소의 값을 빈 문자열로 설정
+      });
+      return true;
+    } else {
+      return false;
+    }
 };
 
 // 버튼을 비활성화하는 함수
