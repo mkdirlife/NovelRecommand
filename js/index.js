@@ -39,7 +39,7 @@ const printAnswer = (answer) => {
 
     // 문장 단위로 배열에 넣음.
     //let answerArray = answer.replace(/\n\s/g, ' ').split(/(?<=[.!?])"?\s+/);
-    let answerArray = answer.split(/(?<=[.!?])\s+|(?<=[.!?])(?=[A-Z])/);
+    let answerArray = answer.split(/(?<=[.?!])\s|(?<=[.?!])(?=\d|\w|[\uAC00-\uD7A3])/);
 
     let checkText = '';
     let currentLength = 0;
@@ -121,7 +121,7 @@ function isValid() {
         .map(input => input.value);                                 // 필터링된 입력 필드의 값을 배열로 만듦    
   
     // 한글이 아닌 문자를 찾는 정규 표현식
-    let reg = /[^\uAC00-\uD7A3ㅣa-z\x20]/g;           // \x20 공백(' ') 아스키코드, /g 전역검색
+    let reg = /[^\uAC00-\uD7A3ㅣa-z | A-Z\x20]/g;           // \x20 공백(' ') 아스키코드, /g 전역검색
  
     for(i=0 ; i < values.length-1 ; i++){
 
