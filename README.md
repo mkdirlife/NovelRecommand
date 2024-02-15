@@ -47,7 +47,8 @@ graph LR
 ```
 
 * 폴더 구조
-   <img src="https://github.com/mkdirlife/shortStoryRecommand/issues/1#issue-2135928115" width="500"> 
+
+  <img src="README%20image/폴더구조.png"> 
 
 * 코드 컨벤션과 변수 컨벤션
     * 변수명(함수명): 역할
