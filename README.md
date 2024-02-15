@@ -47,16 +47,7 @@ graph LR
 ```
 
 * 폴더 구조
-    📦HTML_CSS project
-     ┣ 📂images
-     ┃ ┗ 📜writing.png
-     ┣ 📂js
-     ┃ ┗ 📜index.js
-     ┣ 📂styles
-     ┃ ┣ 📜common.css
-     ┃ ┣ 📜reset.css
-     ┃ ┗ 📜style.css
-     ┗ 📜index.html
+   <img src="https://github.com/mkdirlife/shortStoryRecommand/issues/1#issue-2135928115" width="500"> 
 
 * 코드 컨벤션과 변수 컨벤션
     * 변수명(함수명): 역할
