@@ -121,20 +121,5 @@ sequenceDiagram
 
 * 참고
     * https://www.figma.com/file/Hr6ifwSCHj2HFdtMK2JkMP/%EB%AA%A8%EB%91%90%EC%9D%98%EC%97%B0%EA%B5%AC%EC%86%8C_%EC%98%A4%EB%A6%84%EC%BA%A0%ED%94%84_AI-%ED%99%9C%EC%9A%A9-%EB%B0%B1%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C-%EA%B3%BC%EC%A0%95?type=design&node-id=110062-12&mode=design&t=1pdcGnsm2nFNdGVS-0 스타일을 참고
-    <table>
-        <tr>
-            <th>레퍼런스 이미지 메인</th>
-        </tr>
-        <tr>
-            <td><img src="readme_img/레퍼런스.png" width="100%"></td>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <th>레퍼런스 이미지 블로그</th>
-        </tr>
-        <tr>
-            <td><img src="readme_img/레퍼런스2.png" width="100%"></td>
-        </tr>
-    </table>
+
 
