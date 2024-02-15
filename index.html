@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,15 +10,49 @@
 </head>
 <body>
     <header class="cont-header">
-        <h1 class="a11y">HTML/CSS PROJECT</h1>
+        <h1 class="a11y">이야기 추천 페이지</h1>
 
         <span class="left-text">LOGO</span>
         <span class="right-text">ⓒ WENIV Corp.</span>
 
     </header>
     <main class="cont-main">
- 
-
+        <section class="top-section">
+            <section class="img-section">
+                <h2 class="a11y">이미지</h2>
+                <img src="images/writing.png" alt="">    
+            </section>
+            <form class="input-form">
+                <h3>짧은 글 추천</h3>   
+                <p>원하는 글 형식을 적어주세요.</p>
+                <label class="a11y" for="lablForm">글 형식</label>
+                <input class="txtInput1" type="text" id="lablForm" required placeholder="예&#41;소설, 시, 에세이 등">
+                <p>주제를 적어 주세요.</p>
+                <label class="a11y" for="lablSubject">글 주제</label>
+                <input class="txtInput2" type="text" id="lablSubject" required placeholder="예&#41;우주, 바다, 전쟁, 여행 등">
+                <p>원하는 장르를 적어주세요.</p>
+                <label class="a11y" for="lablStyle">작가 스타일</label>
+                <input class="txtInput3" type="text" id="lablStyle" required placeholder="예&#41;판타지, SF, 미스터리, 로맨스 등">
+                <p>원하는 글자 수를 선택해 주세요.</p>
+                <fieldset class="radioBox">
+                    <input type="radio" name="select" value="500" id="lablWriting500" required>            
+                    <label for="lablWriting500">500자</label>                
+                    <input type="radio" name="select" value="1000" id="lablWriting1000">            
+                    <label for="lablWriting1000">1000자</label>                                
+                </fieldset>
+                <button type="submit">글 생성!</button>
+                <span id="messageBox" class="error-message"></span>
+            </form>
+        </section>
+        <section class="bottom-section">
+            <h2>짧은 글</h2>
+            <table id="resultTable">
+                <tr>
+                    <td>질문에 답을 입력하고, '글생성!' 버튼을 누르면 짧은 글이 자동으로 생성됩니다.</td>
+                </tr>
+            </table>
+        </section>
     </main>
+    <script src="js/index.js"></script>
 </body>
 </html>
