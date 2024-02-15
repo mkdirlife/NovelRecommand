@@ -18,22 +18,17 @@
    * 개발프로그램 : HTML, CSS, JavaScript
    * 서비스 배포 : GitHub    
 
-* 기능 명세
+* 흐름도
 ```mermaid
-sequenceDiagram
-    participant 사용자
-    participant 웹사이트
-    participant OpenAI API
-
-    사용자->>+웹사이트: 입력 폼 작성(글 형식, 주제, 장르)
-    웹사이트->>+웹사이트: 유효성 검사
-    alt 유효한 입력
-        웹사이트->>+OpenAI API: 글 생성 API 호출
-        OpenAI API-->>-웹사이트: 생성된 글 응답
-        웹사이트-->>-사용자: 글 표시
-    else 유효하지 않은 입력
-        웹사이트-->>-사용자: 오류 메시지 표시
-    end
+graph TD;
+    A[웹 페이지 접속] --> B[입력 폼 작성]
+    B --> C{유효성 검사}
+    C -- 유효 --> D[서버로 요청 전송]
+    C -- 유효하지 않음 --> E[오류 메시지 표시]
+    D --> F[OpenAI API 글 생성 요청]
+    F --> G[생성된 글 응답]
+    G --> H[웹 페이지에 글 표시]
+    E --> B
 ```
 
 * 폴더 구조
@@ -64,6 +59,24 @@ gantt
     테스트                  :     tes1, after dev1, 6h
     section 배포
     배포 준비               :     dep1, after tes1, 6h
+```
+
+* 시퀀스 다이어그램
+```mermaid
+sequenceDiagram
+    participant 사용자
+    participant 웹사이트
+    participant OpenAI API
+
+    사용자->>+웹사이트: 입력 폼 작성(글 형식, 주제, 장르)
+    웹사이트->>+웹사이트: 유효성 검사
+    alt 유효한 입력
+        웹사이트->>+OpenAI API: 글 생성 API 호출
+        OpenAI API-->>-웹사이트: 생성된 글 응답
+        웹사이트-->>-사용자: 글 표시
+    else 유효하지 않은 입력
+        웹사이트-->>-사용자: 오류 메시지 표시
+    end
 ```
 
 * 화면 정의서
