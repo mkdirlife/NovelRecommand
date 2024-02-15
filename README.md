@@ -12,7 +12,11 @@
 * 서비스 URL 정보
     * 실행 URL: https://mkdirlife.github.io/shortStoryRecommand
     * blog github repo: https://github.com/mkdirlife/shortStoryRecommand
-    
+
+* 개발환경
+   * 개발 : VSCode
+   * Frontend: HTML, CSS, JavaScript
+   * 서비스 배포 : GitHub    
 
 * 구조
 ```mermaid
@@ -53,15 +57,13 @@ graph LR
         * blogMenu(initDataBlogMenu): (fetch) repo에서 menu폴더에 있는 파일 명을 파싱, 데이터가 이미 있다면 다시 통신하지 않음.
         * posts: (fetch) post의 정보를 가져와 데이터 저장, 재접속시 , 데이터가 이미 있다면 다시 통신하지 않음.
         * url
-            * url: 현재 url
-            * pathParts: split된 url
-            * origin: href + pathname
+            * url: ChatGPT api 주소
         * isLocal: 로컬과 배포여부
 
 * WBS
 ```mermaid
 gantt
-    title 깃헙 정적 블로그
+    title 이야기 추천 페이지 with ChatGPT
     dateFormat  YYYY-MM-DD
     section 계획
     프로젝트 범위 정의        :    des1, 2024-02-13, 1d
