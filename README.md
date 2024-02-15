@@ -14,37 +14,26 @@
     * blog github repo: https://github.com/mkdirlife/shortStoryRecommand
 
 * 개발환경
-   * 개발 : VSCode
-   * Frontend: HTML, CSS, JavaScript
+   * 개발툴 : VSCode
+   * 개발프로그램 : HTML, CSS, JavaScript
    * 서비스 배포 : GitHub    
 
-* 구조
+* 기능 명세
 ```mermaid
-graph LR
-    %% Local Utils
-    A[Client] -->|Load Utilities| B[JS/utils.js]
-    A -->|스타일 로드| C[style/globalStyle.js]
+sequenceDiagram
+    participant 사용자
+    participant 웹사이트
+    participant OpenAI API
 
-    %% CDN
-    A -->|Load Libraries| D[CDN/marked.min.js]
-    A -->|Load Libraries| E[CDN/highlight.min.js]
-    E -->|Highlight Syntax _ 현재 파이썬만 지원| F[CDN/python.min.js]
-    A -->|Load Libraries| G[CDN/tailwind.css]
-    
-    %% Request
-    A -->|Request| H[JS/config.js]
-    H --> I[JS/URLparsing.js]
-    I -->|데이터 초기화 _ 로컬/배포 상태에 따라 호출 다름| J[JS/initData.js]
-    J --> K[JS/render.js]
-    K -->|마크다운/노트북 체크| L[style/blogContentsStyle.js]
-    L -->|노트북일 경우| M[JS/convertIpynbToHtml.js]
-
-    %% Style
-    K -.->|스타일 적용| C[style/globalStyle.js]
-    L -.->|스타일 적용| C[style/globalStyle.js]
-    M -.->|스타일 적용| C[style/globalStyle.js]
-    
-    A -->|Toggle Mobile Menu| Q[JS/mobileMenuToggle.js]
+    사용자->>+웹사이트: 입력 폼 작성(글 형식, 주제, 장르)
+    웹사이트->>+웹사이트: 유효성 검사
+    alt 유효한 입력
+        웹사이트->>+OpenAI API: 글 생성 API 호출
+        OpenAI API-->>-웹사이트: 생성된 글 응답
+        웹사이트-->>-사용자: 글 표시
+    else 유효하지 않은 입력
+        웹사이트-->>-사용자: 오류 메시지 표시
+    end
 ```
 
 * 폴더 구조
